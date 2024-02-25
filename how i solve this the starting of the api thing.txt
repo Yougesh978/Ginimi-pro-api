@@ -1,0 +1,340 @@
+(base) PS C:\Users\youge\OneDrive\Desktop\git\fuc> conda activate venv
+
+EnvironmentNameNotFound: Could not find conda environment: venv
+You can list all discoverable environments with `conda info --envs`.
+
+
+Invoke-Expression : Cannot bind argument to parameter 'Command' because it is an empty string.
+At C:\Users\youge\anaconda3\shell\condabin\Conda.psm1:76 char:36
++         Invoke-Expression -Command $activateCommand;
++                                    ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidData: (:) [Invoke-Expression], ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.Inv 
+   okeExpressionCommand
+
+(base) PS C:\Users\youge\OneDrive\Desktop\git\fuc> ls
+
+
+    Directory: C:\Users\youge\OneDrive\Desktop\git\fuc
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        16-02-2024     00:53                venv
+-a----        16-02-2024     01:04              0 tempCodeRunnerFile.python
+
+
+(base) PS C:\Users\youge\OneDrive\Desktop\git\fuc> conda info --envs
+# conda environments:
+#
+                         C:\Users\youge\OneDrive\Desktop\git\api\venv
+                         C:\Users\youge\OneDrive\Desktop\git\fuc\venv
+base                  *  C:\Users\youge\anaconda3
+
+(base) PS C:\Users\youge\OneDrive\Desktop\git\fuc> conda activate C:\Users\youge\OneDrive\Desktop\git\api\venv
+(C:\Users\youge\OneDrive\Desktop\git\api\venv) PS C:\Users\youge\OneDrive\Desktop\git\fuc> pip install -r requirements.txt
+Collecting streamlit (from -r requirements.txt (line 1))
+  Using cached streamlit-1.31.1-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting google-generativeai (from -r requirements.txt (line 2))
+  Using cached google_generativeai-0.3.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dotenv (from -r requirements.txt (line 3))
+  Using cached python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+Collecting altair<6,>=4.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached altair-5.2.0-py3-none-any.whl.metadata (8.7 kB)
+Collecting blinker<2,>=1.0.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached blinker-1.7.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting cachetools<6,>=4.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached cachetools-5.3.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting click<9,>=7.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting importlib-metadata<8,>=1.4 (from streamlit->-r requirements.txt (line 1))
+  Using cached importlib_metadata-7.0.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting numpy<2,>=1.19.3 (from streamlit->-r requirements.txt (line 1))
+  Downloading numpy-1.26.4-cp310-cp310-win_amd64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 1.6 MB/s eta 0:00:00
+Collecting packaging<24,>=16.8 (from streamlit->-r requirements.txt (line 1))
+  Using cached packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pandas<3,>=1.3.0 (from streamlit->-r requirements.txt (line 1))
+  Downloading pandas-2.2.0-cp310-cp310-win_amd64.whl.metadata (19 kB)
+Collecting pillow<11,>=7.1.0 (from streamlit->-r requirements.txt (line 1))
+  Downloading pillow-10.2.0-cp310-cp310-win_amd64.whl.metadata (9.9 kB)
+Collecting protobuf<5,>=3.20 (from streamlit->-r requirements.txt (line 1))
+  Using cached protobuf-4.25.2-cp310-abi3-win_amd64.whl.metadata (541 bytes)
+Collecting pyarrow>=7.0 (from streamlit->-r requirements.txt (line 1))
+  Downloading pyarrow-15.0.0-cp310-cp310-win_amd64.whl.metadata (3.1 kB)
+Collecting python-dateutil<3,>=2.7.3 (from streamlit->-r requirements.txt (line 1))
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 1.7 MB/s eta 0:00:00
+Collecting requests<3,>=2.27 (from streamlit->-r requirements.txt (line 1))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting rich<14,>=10.14.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached rich-13.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting tenacity<9,>=8.1.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached tenacity-8.2.3-py3-none-any.whl.metadata (1.0 kB)
+Collecting toml<2,>=0.10.1 (from streamlit->-r requirements.txt (line 1))
+  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting typing-extensions<5,>=4.3.0 (from streamlit->-r requirements.txt (line 1))
+  Using cached typing_extensions-4.9.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting tzlocal<6,>=1.1 (from streamlit->-r requirements.txt (line 1))
+  Using cached tzlocal-5.2-py3-none-any.whl.metadata (7.8 kB)
+Collecting validators<1,>=0.2 (from streamlit->-r requirements.txt (line 1))
+  Using cached validators-0.22.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit->-r requirements.txt (line 1))
+  Downloading GitPython-3.1.42-py3-none-any.whl.metadata (12 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit->-r requirements.txt (line 1))
+  Using cached pydeck-0.8.1b0-py2.py3-none-any.whl.metadata (3.9 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit->-r requirements.txt (line 1))
+  Using cached tornado-6.4-cp38-abi3-win_amd64.whl.metadata (2.6 kB)
+Collecting watchdog>=2.1.5 (from streamlit->-r requirements.txt (line 1))
+  Using cached watchdog-4.0.0-py3-none-win_amd64.whl.metadata (37 kB)
+Collecting google-ai-generativelanguage==0.4.0 (from google-generativeai->-r requirements.txt (line 2))
+  Using cached google_ai_generativelanguage-0.4.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting google-auth (from google-generativeai->-r requirements.txt (line 2))
+  Downloading google_auth-2.28.0-py2.py3-none-any.whl.metadata (4.7 kB)
+Collecting google-api-core (from google-generativeai->-r requirements.txt (line 2))
+  Using cached google_api_core-2.17.1-py3-none-any.whl.metadata (2.7 kB)
+Collecting tqdm (from google-generativeai->-r requirements.txt (line 2))
+  Using cached tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+Collecting proto-plus<2.0.0dev,>=1.22.3 (from google-ai-generativelanguage==0.4.0->google-generativeai->-r requirements.txt (line 2))
+  Using cached proto_plus-1.23.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting jinja2 (from altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached Jinja2-3.1.3-py3-none-any.whl.metadata (3.3 kB)
+Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached jsonschema-4.21.1-py3-none-any.whl.metadata (7.8 kB)
+Collecting toolz (from altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting colorama (from click<9,>=7.0->streamlit->-r requirements.txt (line 1))
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r requirements.txt (line 1))
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting googleapis-common-protos<2.0.dev0,>=1.56.2 (from google-api-core->google-generativeai->-r requirements.txt (line 2))
+  Using cached googleapis_common_protos-1.62.0-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth->google-generativeai->-r requirements.txt (line 2))
+  Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl.metadata (3.6 kB)
+Collecting rsa<5,>=3.1.4 (from google-auth->google-generativeai->-r requirements.txt (line 2))
+  Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Collecting zipp>=0.5 (from importlib-metadata<8,>=1.4->streamlit->-r requirements.txt (line 1))
+  Using cached zipp-3.17.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting pytz>=2020.1 (from pandas<3,>=1.3.0->streamlit->-r requirements.txt (line 1))
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas<3,>=1.3.0->streamlit->-r requirements.txt (line 1))
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting six>=1.5 (from python-dateutil<3,>=2.7.3->streamlit->-r requirements.txt (line 1))
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27->streamlit->-r requirements.txt (line 1))
+  Downloading charset_normalizer-3.3.2-cp310-cp310-win_amd64.whl.metadata (34 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.27->streamlit->-r requirements.txt (line 1))
+  Downloading idna-3.6-py3-none-any.whl.metadata (9.9 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27->streamlit->-r requirements.txt (line 1))
+  Downloading urllib3-2.2.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.27->streamlit->-r requirements.txt (line 1))
+  Downloading certifi-2024.2.2-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<14,>=10.14.0->streamlit->-r requirements.txt (line 1))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=10.14.0->streamlit->-r requirements.txt (line 1))
+  Using cached pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r requirements.txt (line 1))
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting grpcio<2.0dev,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.0->google-ai-generativelanguage==0.4.0->google-generativeai->-r requirements.txt (line 2))
+  Downloading grpcio-1.60.1-cp310-cp310-win_amd64.whl.metadata (4.2 kB)
+Collecting grpcio-status<2.0.dev0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.10.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,<3.0.0dev,>=1.34.0->google-ai-generativelanguage==0.4.0->google-generativeai->-r requirements.txt (line 2))
+  Using cached grpcio_status-1.60.1-py3-none-any.whl.metadata (1.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Downloading MarkupSafe-2.1.5-cp310-cp310-win_amd64.whl.metadata (3.1 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Using cached referencing-0.33.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=3.0->altair<6,>=4.0->streamlit->-r requirements.txt (line 1))
+  Downloading rpds_py-0.18.0-cp310-none-win_amd64.whl.metadata (4.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit->-r requirements.txt (line 1))
+  Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting pyasn1<0.6.0,>=0.4.6 (from pyasn1-modules>=0.2.1->google-auth->google-generativeai->-r requirements.txt (line 2))
+  Using cached pyasn1-0.5.1-py2.py3-none-any.whl.metadata (8.6 kB)
+Using cached streamlit-1.31.1-py2.py3-none-any.whl (8.4 MB)
+Using cached google_generativeai-0.3.2-py3-none-any.whl (146 kB)
+Using cached google_ai_generativelanguage-0.4.0-py3-none-any.whl (598 kB)
+Using cached python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Using cached altair-5.2.0-py3-none-any.whl (996 kB)
+Using cached blinker-1.7.0-py3-none-any.whl (13 kB)
+Using cached cachetools-5.3.2-py3-none-any.whl (9.3 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Downloading GitPython-3.1.42-py3-none-any.whl (195 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 195.4/195.4 kB 1.7 MB/s eta 0:00:00
+Using cached google_api_core-2.17.1-py3-none-any.whl (137 kB)
+Downloading google_auth-2.28.0-py2.py3-none-any.whl (186 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.9/186.9 kB 2.8 MB/s eta 0:00:00
+Using cached importlib_metadata-7.0.1-py3-none-any.whl (23 kB)
+Downloading numpy-1.26.4-cp310-cp310-win_amd64.whl (15.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.8/15.8 MB 1.4 MB/s eta 0:00:00
+Using cached packaging-23.2-py3-none-any.whl (53 kB)
+Downloading pandas-2.2.0-cp310-cp310-win_amd64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 1.6 MB/s eta 0:00:00
+Downloading pillow-10.2.0-cp310-cp310-win_amd64.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 2.1 MB/s eta 0:00:00
+Using cached protobuf-4.25.2-cp310-abi3-win_amd64.whl (413 kB)
+Downloading pyarrow-15.0.0-cp310-cp310-win_amd64.whl (24.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.8/24.8 MB 1.8 MB/s eta 0:00:00
+Using cached pydeck-0.8.1b0-py2.py3-none-any.whl (4.8 MB)
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 1.6 MB/s eta 0:00:00
+Using cached rich-13.7.0-py3-none-any.whl (240 kB)
+Using cached tenacity-8.2.3-py3-none-any.whl (24 kB)
+Using cached tornado-6.4-cp38-abi3-win_amd64.whl (436 kB)
+Using cached typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Using cached tzlocal-5.2-py3-none-any.whl (17 kB)
+Using cached validators-0.22.0-py3-none-any.whl (26 kB)
+Using cached watchdog-4.0.0-py3-none-win_amd64.whl (82 kB)
+Using cached tqdm-4.66.2-py3-none-any.whl (78 kB)
+Downloading certifi-2024.2.2-py3-none-any.whl (163 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.8/163.8 kB 2.0 MB/s eta 0:00:00
+Downloading charset_normalizer-3.3.2-cp310-cp310-win_amd64.whl (100 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.3/100.3 kB 1.9 MB/s eta 0:00:00
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Using cached googleapis_common_protos-1.62.0-py2.py3-none-any.whl (228 kB)
+Downloading idna-3.6-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 1.7 MB/s eta 0:00:00
+Using cached Jinja2-3.1.3-py3-none-any.whl (133 kB)
+Using cached jsonschema-4.21.1-py3-none-any.whl (85 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached proto_plus-1.23.0-py3-none-any.whl (48 kB)
+Using cached pyasn1_modules-0.3.0-py2.py3-none-any.whl (181 kB)
+Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 505.5/505.5 kB 2.0 MB/s eta 0:00:00
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 1.7 MB/s eta 0:00:00
+Downloading urllib3-2.2.0-py3-none-any.whl (120 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.9/120.9 kB 1.8 MB/s eta 0:00:00
+Using cached zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Using cached toolz-0.12.1-py3-none-any.whl (56 kB)
+Using cached attrs-23.2.0-py3-none-any.whl (60 kB)
+Downloading grpcio-1.60.1-cp310-cp310-win_amd64.whl (3.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 2.1 MB/s eta 0:00:00
+Using cached grpcio_status-1.60.1-py3-none-any.whl (14 kB)
+Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Downloading MarkupSafe-2.1.5-cp310-cp310-win_amd64.whl (17 kB)
+Using cached pyasn1-0.5.1-py2.py3-none-any.whl (84 kB)
+Using cached referencing-0.33.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.18.0-cp310-none-win_amd64.whl (206 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.7/206.7 kB 2.1 MB/s eta 0:00:00
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Installing collected packages: pytz, zipp, watchdog, validators, urllib3, tzdata, typing-extensions, tornado, toolz, toml, tenacity, smmap, six, rpds-py, python-dotenv, pygments, pyasn1, protobuf, pillow, packaging, numpy, mdurl, MarkupSafe, idna, grpcio, colorama, charset-normalizer, certifi, cachetools, blinker, attrs, tzlocal, tqdm, rsa, requests, referencing, python-dateutil, pyasn1-modules, pyarrow, proto-plus, markdown-it-py, jinja2, importlib-metadata, googleapis-common-protos, gitdb, click, rich, pydeck, pandas, jsonschema-specifications, grpcio-status, google-auth, gitpython, jsonschema, google-api-core, altair, streamlit, google-ai-generativelanguage, google-generativeai
+Successfully installed MarkupSafe-2.1.5 altair-5.2.0 attrs-23.2.0 blinker-1.7.0 cachetools-5.3.2 certifi-2024.2.2 charset-normalizer-3.3.2 click-8.1.7 colorama-0.4.6 gitdb-4.0.11 gitpython-3.1.42 google-ai-generativelanguage-0.4.0 google-api-core-2.17.1 google-auth-2.28.0 google-generativeai-0.3.2 googleapis-common-protos-1.62.0 grpcio-1.60.1 grpcio-status-1.60.1 idna-3.6 importlib-metadata-7.0.1 jinja2-3.1.3 jsonschema-4.21.1 jsonschema-specifications-2023.12.1 markdown-it-py-3.0.0 mdurl-0.1.2 numpy-1.26.4 packaging-23.2 pandas-2.2.0 pillow-10.2.0 proto-plus-1.23.0 protobuf-4.25.2 pyarrow-15.0.0 pyasn1-0.5.1 pyasn1-modules-0.3.0 pydeck-0.8.1b0 pygments-2.17.2 python-dateutil-2.8.2 python-dotenv-1.0.1 pytz-2024.1 referencing-0.33.0 requests-2.31.0 rich-13.7.0 rpds-py-0.18.0 rsa-4.9 six-1.16.0 smmap-5.0.1 streamlit-1.31.1 tenacity-8.2.3 toml-0.10.2 toolz-0.12.1 tornado-6.4 tqdm-4.66.2 typing-extensions-4.9.0 tzdata-2024.1 tzlocal-5.2 urllib3-2.2.0 validators-0.22.0 watchdog-4.0.0 zipp-3.17.0
+(C:\Users\youge\OneDrive\Desktop\git\api\venv) PS C:\Users\youge\OneDrive\Desktop\git\fuc> streamlit run app.py
+
+      Welcome to Streamlit!
+
+      If you’d like to receive helpful onboarding emails, news, offers, promotions,
+      and the occasional swag, please enter your email address below. Otherwise,
+      leave this field blank.
+
+      Email:  send2yougesh@gmail.com
+
+  You can find our privacy policy at https://streamlit.io/privacy-policy
+
+  Summary:
+  - This open source library collects usage statistics.
+  - We cannot see and do not store information contained inside Streamlit apps,
+    such as text, charts, images, etc.
+  - Telemetry data is stored in servers in the United States.
+  - If you'd like to opt out, add the following to %userprofile%/.streamlit/config.toml,
+    creating that file if necessary:
+
+    [browser]
+    gatherUsageStats = false
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.29.26:8501
+
+2024-02-16 01:58:23.528 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\youge\OneDrive\Desktop\git\api\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "C:\Users\youge\OneDrive\Desktop\git\fuc\app.py", line 13, in <module>
+    from IPython.display import display
+ModuleNotFoundError: No module named 'IPython'
+2024-02-16 01:58:38.149 Uncaught app exception
+Traceback (most recent call last):
+  File "C:\Users\youge\OneDrive\Desktop\git\api\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "C:\Users\youge\OneDrive\Desktop\git\fuc\app.py", line 13, in <module>
+    from IPython.display import display
+ModuleNotFoundError: No module named 'IPython'
+  Stopping...
+(C:\Users\youge\OneDrive\Desktop\git\api\venv) PS C:\Users\youge\OneDrive\Desktop\git\fuc> conda install ipython
+Channels:
+ - defaults
+Platform: win-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: C:\Users\youge\OneDrive\Desktop\git\api\venv
+
+  added / updated specs:
+    - ipython
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    colorama-0.4.6             |  py310haa95532_0          32 KB
+    exceptiongroup-1.2.0       |  py310haa95532_0          31 KB
+    ipython-8.20.0             |  py310haa95532_0         1.1 MB
+    jedi-0.18.1                |  py310haa95532_1         983 KB
+    matplotlib-inline-0.1.6    |  py310haa95532_0          17 KB
+    prompt-toolkit-3.0.43      |  py310haa95532_0         592 KB
+    pygments-2.15.1            |  py310haa95532_1         1.7 MB
+    python-3.10.13             |       he1021f5_0        15.8 MB
+    traitlets-5.7.1            |  py310haa95532_0         208 KB
+    ------------------------------------------------------------
+                                           Total:        20.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  asttokens          pkgs/main/noarch::asttokens-2.0.5-pyhd3eb1b0_0
+  colorama           pkgs/main/win-64::colorama-0.4.6-py310haa95532_0
+  decorator          pkgs/main/noarch::decorator-5.1.1-pyhd3eb1b0_0
+  exceptiongroup     pkgs/main/win-64::exceptiongroup-1.2.0-py310haa95532_0
+  executing          pkgs/main/noarch::executing-0.8.3-pyhd3eb1b0_0
+  ipython            pkgs/main/win-64::ipython-8.20.0-py310haa95532_0
+  jedi               pkgs/main/win-64::jedi-0.18.1-py310haa95532_1
+  matplotlib-inline  pkgs/main/win-64::matplotlib-inline-0.1.6-py310haa95532_0
+  parso              pkgs/main/noarch::parso-0.8.3-pyhd3eb1b0_0
+  prompt-toolkit     pkgs/main/win-64::prompt-toolkit-3.0.43-py310haa95532_0
+  prompt_toolkit     pkgs/main/noarch::prompt_toolkit-3.0.43-hd3eb1b0_0
+  pure_eval          pkgs/main/noarch::pure_eval-0.2.2-pyhd3eb1b0_0
+  pygments           pkgs/main/win-64::pygments-2.15.1-py310haa95532_1
+  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_1
+  stack_data         pkgs/main/noarch::stack_data-0.2.0-pyhd3eb1b0_0
+  traitlets          pkgs/main/win-64::traitlets-5.7.1-py310haa95532_0
+  wcwidth            pkgs/main/noarch::wcwidth-0.2.5-pyhd3eb1b0_0
+
+The following packages will be UPDATED:
+
+  openssl                                 1.1.1w-h2bbff1b_0 --> 3.0.13-h2bbff1b_0
+  python                                  3.10.0-h96c0403_3 --> 3.10.13-he1021f5_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+
+Preparing transaction: done                                                                                            
+Verifying transaction: done                                                                                            
+Executing transaction: done                                                                                            
+(C:\Users\youge\OneDrive\Desktop\git\api\venv) PS C:\Users\youge\OneDrive\Desktop\git\fuc> streamlit run app.py        
+                                                                                                                       
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.29.26:8501
